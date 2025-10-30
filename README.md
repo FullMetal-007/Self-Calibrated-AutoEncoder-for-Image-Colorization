@@ -19,7 +19,6 @@ redesigned with self-calibrated convolutional layers for more accurate and stabl
 
 ## Project Structure
 
-```
 Automatic-Image-Colorization/
 ├── main.py           # Training and validation workflow
 ├── model.py          # SCA-Net architecture with self-calibrated blocks
@@ -29,7 +28,6 @@ Automatic-Image-Colorization/
 ├── outputs/          # Output colorized images and visualizations
 ├── requirements.txt  # Python dependencies
 └── README.md         # This documentation file
-```
 
 ---
 
@@ -37,7 +35,6 @@ Automatic-Image-Colorization/
 
 Prepare your dataset directory with separate training and validation splits:
 
-```
 dataset/
 ├── train/
 │   ├── img1.jpg
@@ -47,7 +44,6 @@ dataset/
     ├── imgA.jpg
     ├── imgB.jpg
     └── ...
-```
 
 - Store images as RGB (no need to manually convert to grayscale).
 
@@ -83,17 +79,15 @@ SCA-Net is an encoder-decoder convolutional network enhanced with self-calibrate
 
 ### Architecture Flow:
 
-```
-Input (L channel)
-    ↓
-Encoder (Self-Calibrated Blocks)
-    ↓
-Bottleneck (Self-Calibrated)
-    ↓
-Decoder (Upsampling + Skip Connections)
-    ↓
+Input (L channel)  
+↓  
+Encoder (Self-Calibrated Blocks)  
+↓  
+Bottleneck (Self-Calibrated)  
+↓  
+Decoder (Upsampling + Skip Connections)  
+↓  
 Output (AB channels)
-```
 
 ---
 
@@ -117,3 +111,4 @@ pip install -r requirements.txt
 
 ---
 ```
+
