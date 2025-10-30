@@ -1,19 +1,19 @@
 ```markdown
 # Self-Calibrated AutoEncoder for Image Colorization
 
-This project implements an advanced deep learning model for **automatic image colorization**, built with a **Self-Calibrated AutoEncoder (SCA-Net)** architecture.
-It is based on the original [lukemelas/Automatic-Image-Colorization](https://github.com/lukemelas/Automatic-Image-Colorization) but redesigned with self-calibrated
-convolutional layers to achieve more accurate and stable color restoration.
+An advanced deep learning model for **automatic image colorization** using a **Self-Calibrated AutoEncoder (SCA-Net)** architecture.  
+Inspired by [lukemelas/Automatic-Image-Colorization](https://github.com/lukemelas/Automatic-Image-Colorization),
+redesigned with self-calibrated convolutional layers for more accurate and stable color restoration.
 
 ---
 
 ## Features
 
 - Self-Calibrated Convolutional AutoEncoder  
-- Evaluation metrics: PSNR, SSIM, MSE  
-- Grayscale to color inference at any image resolution  
-- Support for high-resolution datasets (e.g., COCO, CelebA-HQ, Places365)  
-- Clean, modular, and maintainable codebase  
+- Evaluation with PSNR, SSIM, and MSE metrics  
+- Grayscale to color inference on images of any resolution  
+- Supports high-resolution datasets (e.g., COCO, CelebA-HQ, Places365)  
+- Clean, modular, and extensible codebase  
 
 ---
 
@@ -21,21 +21,21 @@ convolutional layers to achieve more accurate and stable color restoration.
 
 ```
 Automatic-Image-Colorization/
-├── main.py           # Training and validation pipeline
-├── model.py          # Self-Calibrated AutoEncoder (SCA-Net) architecture
-├── utils.py          # Dataset loader, metrics, and visualizations
-├── inference.py      # Script for inference on single images
-├── checkpoints/      # Directory for saved model checkpoints
-├── outputs/          # Directory for saving output visualizations
+├── main.py           # Training and validation workflow
+├── model.py          # SCA-Net architecture with self-calibrated blocks
+├── utils.py          # Dataset loader, metrics, and utility functions
+├── inference.py      # Single-image inference script
+├── checkpoints/      # Saved model weights
+├── outputs/          # Output colorized images and visualizations
 ├── requirements.txt  # Python dependencies
-└── README.md         # Project documentation
+└── README.md         # This documentation file
 ```
 
 ---
 
 ## Dataset Preparation
 
-Organize your dataset with train and validation splits as follows:
+Prepare your dataset directory with separate training and validation splits:
 
 ```
 dataset/
@@ -49,7 +49,7 @@ dataset/
     └── ...
 ```
 
-Each folder should contain RGB images (no need to pre-convert to grayscale).
+- Store images as RGB (no need to manually convert to grayscale).
 
 **Recommended Datasets:**
 
@@ -61,29 +61,27 @@ Each folder should contain RGB images (no need to pre-convert to grayscale).
 
 ## Training
 
-To train the model, run:
+Run the following command to start training:
 
 ```
 python main.py dataset/ --epochs 50 --batch-size 16
 ```
 
-**During Training:**
-
-- MSE loss is displayed per batch.  
-- PSNR and SSIM metrics are computed after each epoch.  
-- Visual outputs (grayscale, original color, colorized) are saved under the `outputs/` directory.
+- Training prints MSE loss per batch.  
+- After each epoch, PSNR and SSIM evaluation metrics are reported.  
+- Visual outputs (grayscale, original, and colorized) are saved to `outputs/`.
 
 ---
 
 ## Model Overview
 
-The Self-Calibrated AutoEncoder (SCA-Net) is a convolutional encoder-decoder network enhanced with self-calibrated convolutional blocks. This design allows for:
+SCA-Net is an encoder-decoder convolutional network enhanced with self-calibrated blocks that enable:
 
 - Context-aware feature recalibration  
-- Improved texture consistency in colorization  
-- Balanced and natural color restoration  
+- Improved texture and color fidelity  
+- Natural look color restoration  
 
-**Architecture flow:**
+### Architecture Flow:
 
 ```
 Input (L channel)
@@ -101,21 +99,21 @@ Output (AB channels)
 
 ## Acknowledgements
 
-- Original framework inspired by [lukemelas/Automatic-Image-Colorization](https://github.com/lukemelas/Automatic-Image-Colorization)  
-- Self-Calibrated convolution concept from SCNet (Liu et al., CVPR 2020)  
+- Original implementation by [lukemelas/Automatic-Image-Colorization](https://github.com/lukemelas/Automatic-Image-Colorization)  
+- Self-Calibrated Conv design inspired by SCNet (Liu et al., CVPR 2020)  
 
 ---
 
-## Next Steps
+## How to Use
 
-1. Save `requirements.txt` and `README.md` files in your project root.  
-2. Install dependencies with:  
-    ```
-    pip install -r requirements.txt
-    ```  
+1. Place `requirements.txt` and this `README.md` in your project root folder.  
+2. Install dependencies:
 
-3. Begin training or inference on your prepared dataset.
+```
+pip install -r requirements.txt
+```
+
+3. Prepare your dataset and start training or inference using provided scripts.
 
 ---
 ```
-
