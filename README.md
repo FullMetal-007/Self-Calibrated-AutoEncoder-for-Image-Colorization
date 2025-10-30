@@ -1,7 +1,9 @@
 ```markdown
 # Self-Calibrated AutoEncoder for Image Colorization
 
-This project implements an advanced deep learning model for **automatic image colorization**, built with a **Self-Calibrated AutoEncoder (SCA-Net)** architecture. It is based on the original [lukemelas/Automatic-Image-Colorization](https://github.com/lukemelas/Automatic-Image-Colorization) but redesigned with self-calibrated convolutional layers to achieve more accurate and stable color restoration.
+This project implements an advanced deep learning model for **automatic image colorization**, built with a **Self-Calibrated AutoEncoder (SCA-Net)** architecture.
+It is based on the original [lukemelas/Automatic-Image-Colorization](https://github.com/lukemelas/Automatic-Image-Colorization) but redesigned with self-calibrated
+convolutional layers to achieve more accurate and stable color restoration.
 
 ---
 
@@ -116,3 +118,4 @@ Output (AB channels)
 
 ---
 ```
+
