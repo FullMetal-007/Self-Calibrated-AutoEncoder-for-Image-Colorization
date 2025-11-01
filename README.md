@@ -54,7 +54,8 @@ dataset/
 
 - [Places365-Standard](http://places2.csail.mit.edu/download.html)  
 - [CelebA-HQ](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)  
-- [COCO 2017 Images](https://cocodataset.org/#download)  
+- [COCO 2017 Images](https://cocodataset.org/#download)
+- [ViCoW](https://data.mendeley.com/datasets/m5zmrr564v/1)
 
 ***
 
@@ -115,3 +116,4 @@ pip install -r requirements.txt
 3. Prepare your dataset and start training or inference using provided scripts.
 
 ---
+
